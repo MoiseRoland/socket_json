@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Definizione del set di caratteri per la pagina (UTF-8) e della viewport per la responsività -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titolo della pagina (visibile nella scheda del browser) -->
+    <title>MySQL e PHP - Informatica</title>
+    
+    <!-- Inclusione della libreria CSS di Bootstrap per la gestione degli stili e dei componenti -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Collegamento al file CSS personalizzato per il sito -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra di navigazione del sito (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="navbar">
+        <div class="container-fluid">
+            <!-- Logo del sito con link alla home (pagina principale) -->
+            <a class="navbar-brand fw-bold text-dark" href="#">SocketSite-Bootstrap</a>
+            
+            <!-- Pulsante per il menu mobile (visibile solo sui dispositivi con schermo più piccolo) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu di navigazione espandibile (quando l'utente clicca il bottone) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" id="navbarItems">
+                    <!-- Gli elementi del menu vengono inseriti dinamicamente tramite JavaScript -->
+                </ul>
+                
+                <!-- Interruttore per cambiare il tema (scuro o chiaro) -->
+                <label class="switch ms-3">
+                    <input type="checkbox" id="modeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto principale della pagina -->
+    <div class="container mt-5">
+        <!-- Sezione di header (contenente titoli o introduzione) -->
+        <div class="row mb-4" id="header">
+            <!-- Questo spazio verrà riempito dinamicamente tramite JavaScript -->
+        </div>
+        
+        <!-- Sezioni principali per il contenuto (ad esempio, descrizioni su MySQL e PHP) -->
+        <div id="sections">
+            <!-- Le varie sezioni verranno aggiunte tramite JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer della pagina (informazioni generali come copyright, link utili, etc.) -->
+    <footer class="text-center py-4 mt-auto" id="footer">
+    </footer>
+
+    <!-- Inclusione degli script JavaScript per il corretto funzionamento dei componenti Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Inclusione di uno script JavaScript personalizzato per gestire le funzionalità generali -->
+    <script src="js/script.js"></script>
+    
+    <!-- Inclusione di uno script per gestire la logica specifica della pagina (per MySQL e PHP) -->
+    <script src="js/informatica.js"></script>
+    
+    <!-- Inclusione di uno script per caricare i dati JSON per la pagina -->
+    <script src="json/informatica.js"></script>
+</body>
+
+</html>

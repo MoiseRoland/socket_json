@@ -1,0 +1,285 @@
+:root {
+    --background-color-light: #dadada;
+    --text-color-light: #333333;
+    --hero-bg-light: #d6daff;
+    --footer-bg-light: #cfcfcf;
+    --card-bg-light: #ffffff;
+    --card-border-light: #e0e0e0;
+    --card-text-light: #4a4a4a;
+    --link-color-light: #ffffff;
+    --link-hover-light: #000000;
+    --button-bg-light: #4caf50;
+    --button-text-light: #ffffff;
+}
+
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.hero-container {
+    background-color: var(--hero-bg-light);
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-card {
+    background-color: var(--card-bg-light);
+    border: 1px solid var(--card-border-light);
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero-card a {
+    font-size: 0.9rem;
+    color: var(--link-color-light);
+}
+
+.hero-card a:hover {
+    color: var(--link-hover-light);
+}
+
+.main-content {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap; 
+}
+
+/* Modifica per ingrandire le card */
+.card {
+    background-color: var(--card-bg-light);
+    border: 2px solid var(--card-border-light);
+    width: 350px; /* Maggiore larghezza per le card */
+    height: 450px; /* Maggiore altezza per le card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombra più evidente */
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease; 
+    margin-bottom: 20px; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    background-color: #f4f4f4;  
+}
+
+.card-header {
+    padding: 15px;
+    font-size: 1.4rem; /* Aumento della dimensione del titolo */
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 1.1rem; /* Aumento della dimensione del testo nel corpo della card */
+}
+
+.card h5 {
+    font-size: 1.5rem; /* Aumento della dimensione del titolo */
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.2rem; /* Aumento della dimensione del testo */
+    margin: 0 15px 20px;
+    color: var(--card-text-light);
+}
+
+.card ul {
+    text-align: left; 
+    font-size: 1.1rem;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+.card a {
+    font-size: 1.1rem;
+    color: var(--link-color-light);
+}
+
+.card a:hover {
+    color: var(--link-hover-light);
+}
+
+footer {
+    background-color: var(--footer-bg-light);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+button {
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--link-hover-light);
+}
+
+[data-theme="dark"] {
+    --background-color-light: #333333;
+    --text-color-light: #f5f5f5;
+    --hero-bg-light: #1c1c1c;
+    --navbar-bg-light: #444444;
+    --footer-bg-light: #2c2c2c;
+    --card-bg-light: #555555;
+    --card-border-light: #777777;
+    --card-text-light: #f5f5f5;
+    --button-bg-light: #4caf50;
+    --button-text-light: #ffffff;
+    --link-color-light: #ffffff;
+    --link-hover-light: #000000;
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg-light);
+    color: var(--card-text-light);
+    border: 1px solid var(--card-border-light);
+}
+
+[data-theme="dark"] footer {
+    background-color: var(--footer-bg-light);
+}
+
+.section-title.highlight {
+    background-color: rgba(255, 255, 0, 0.3);
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(145, 145, 145);
+    transition: color 0.2s ease;
+}
+
+/* Modifica per ingrandire le card specifiche in questa sezione */
+#socket-cards .card {
+    background-color: var(--card-bg-light);
+    border: 1px solid var(--card-border-light);
+    width: 100%;
+    max-width: 350px;
+    height: 450px;  /* Maggiore altezza per le card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#socket-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+}
+
+#socket-cards .card-header {
+    padding: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+#socket-cards .card-body {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: var(--card-text-light);
+    text-align: left;
+    overflow-y: auto; 
+    max-height: 250px; /* Più spazio per il testo */
+}
+
+#socket-cards .card h5 {
+    font-size: 1.4rem;  /* Maggiore dimensione per il titolo */
+    margin-bottom: 1rem;
+}
+
+#socket-cards .card p {
+    font-size: 1.2rem; /* Maggiore dimensione per il testo */
+    margin: 0 10px;
+}
+
+#socket-cards .card ul {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+#socket-cards .card ul li {
+    margin: 5px 0;
+}
+
+#socket-cards .card a {
+    font-size: 1.2rem; /* Maggiore dimensione per il link */
+    color: var(--link-color-light);
+}
+
+#socket-cards .card a:hover {
+    color: var(--link-hover-light);
+}
+
+[data-theme="dark"] #socket-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: #444444;
+}
+
+[data-theme="dark"] #socket-cards .card:hover .card-body {
+    color: var(--card-text-light);
+}
+
+[data-theme="dark"] #socket-cards .card-header {
+    color: #f5f5f5; 
+}
+
+.accordion-button:hover {
+    background-color: #e9ecef;  
+    color: #007bff;
+}
